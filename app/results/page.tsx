@@ -66,8 +66,14 @@ export default function ResultsPage() {
         : 0;
 
     // Generate dynamic content
-    const disputeLetter = !isError ? generateDisputeLetter(data) : "";
-    const phoneScript = !isError ? generatePhoneScript(data) : "";
+    // Use API-provided tailored content if available (verified tailored), otherwise fallback to local generator
+    const disputeLetter = !isError && data.dispute_letter_text
+        ? data.dispute_letter_text
+        : (!isError ? generateDisputeLetter(data) : "");
+
+    const phoneScript = !isError && data.phone_script
+        ? data.phone_script
+        : (!isError ? generatePhoneScript(data) : "");
 
     return (
         <div className="relative min-h-screen bg-background font-sans print:bg-white">
