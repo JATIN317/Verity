@@ -217,7 +217,7 @@ export function AnalysisEngineViz({
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8 relative">
 
                 {/* Left: Inputs (Stacked Bill + Denial) */}
-                <div className="relative z-10 shrink-0 flex flex-col gap-3">
+                <div className="relative z-10 shrink-0 flex flex-row gap-3">
                     {/* Bill Input */}
                     <motion.div
                         className={cn(
@@ -253,7 +253,7 @@ export function AnalysisEngineViz({
                 </div>
 
                 {/* Center: Pipeline */}
-                <div className="flex-1 relative h-20 md:h-24 flex items-center justify-between px-2 md:px-4 w-full max-w-xs md:max-w-none">
+                <div className="flex-1 relative h-20 md:h-24 flex items-center justify-between px-2 md:px-4 w-full max-w-xs md:max-w-none mb-16 md:mb-0">
                     {/* Background track */}
                     <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2 z-0 rounded-full" />
                     {/* Progress indicator */}
@@ -271,7 +271,7 @@ export function AnalysisEngineViz({
                             currentStep={step}
                         />
                     ))}
-                    <div className="absolute -bottom-8 md:-bottom-10 left-1/2 -translate-x-1/2 text-[10px] md:text-xs font-bold tracking-widest text-muted-foreground uppercase whitespace-nowrap">
+                    <div className="absolute -bottom-14 md:-bottom-10 left-1/2 -translate-x-1/2 text-[10px] md:text-xs font-bold tracking-widest text-muted-foreground uppercase whitespace-nowrap">
                         Dual-Core Analysis Engine
                     </div>
                 </div>
