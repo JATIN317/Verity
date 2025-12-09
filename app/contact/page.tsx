@@ -284,16 +284,9 @@ function ContactForm() {
 // =============================================================================
 
 function GlobeVisual() {
-    const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true, amount: 0.3 });
-
     return (
-        <motion.div
-            ref={ref}
-            initial={{ opacity: 0, x: 20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="relative hidden items-center justify-center overflow-hidden md:flex"
+        <div
+            className="relative flex items-center justify-center overflow-hidden w-full"
         >
             <article className="relative mx-auto flex h-[400px] min-h-80 w-full flex-col items-start justify-start overflow-hidden rounded-3xl border bg-gradient-to-b from-primary to-primary/5 p-8 text-2xl tracking-tight lg:h-[450px] lg:text-3xl">
                 <div className="relative z-10 max-w-[200px]">
@@ -327,7 +320,7 @@ function GlobeVisual() {
                     />
                 </div>
             </article>
-        </motion.div>
+        </div>
     );
 }
 

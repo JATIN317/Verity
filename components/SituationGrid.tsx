@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 export function SituationGrid() {
     return (
-        <section className="relative z-20 -mt-10 mb-16 px-4 md:px-6">
+        <section className="relative z-20 mt-8 md:-mt-10 mb-16 px-4 md:px-6">
             <div className="mx-auto max-w-5xl">
                 <div className="grid gap-6 md:grid-cols-2">
                     {/* Left Card: Analyze Bill */}
